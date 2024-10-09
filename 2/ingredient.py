@@ -1,9 +1,9 @@
 class Ingredient:
     def __init__(self, name, weight_raw, weight_cooked, cost) -> None:
-        self._name = name
-        self._weight_raw = weight_raw
-        self._weight_cooked = weight_cooked
-        self._cost = cost
+        self.name = name
+        self.weight_raw = weight_raw
+        self.weight_cooked = weight_cooked
+        self.cost = cost
 
     @property
     def name(self):
