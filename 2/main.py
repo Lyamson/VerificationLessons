@@ -1,4 +1,6 @@
 from recipe import Recipe
+import unittest
+import recipe_unit_test
 
 
 if __name__ == '__main__':
@@ -15,4 +17,6 @@ if __name__ == '__main__':
 
     recipe = Recipe(recipe_from_api['title'], recipe_from_api['ingredients'])
 
-    print(recipe.get_full_cost())
+    # для unittest сделайте дополнительный файл в который поместите его тесты.
+    suite = unittest.TestLoader().loadTestsFromModule(recipe_unit_test)
+    unittest.TextTestRunner().run(suite)
