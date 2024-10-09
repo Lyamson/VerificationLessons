@@ -10,7 +10,7 @@ class Recipe:
         ]
 
     def get_weight(self, portions = 1, raw : bool = False) -> int:
-        return sum([ingredient.weight_raw if raw else ingredient.weight_cooked for ingredient in self.ingredients])
+        return sum([ingredient.weight_raw if raw else ingredient.weight_cooked for ingredient in self.ingredients]) * portions
 
     def get_full_cost(self, portions = 1) -> int:
         return sum([ingredient.cost for ingredient in self.ingredients]) * portions
