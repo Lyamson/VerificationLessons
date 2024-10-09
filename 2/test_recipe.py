@@ -30,7 +30,7 @@ class TestRecipeMethods(unittest.TestCase):
         for name, raw, cooked, cost, expected in ingredient_variations:
             with self.subTest():
                 try:
-                    Ingredient(name, raw, cooked, cost)
+                    Ingredient(name, raw, cooked, cost).name == name
                 except expected:
                     ...
                 except:
