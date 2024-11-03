@@ -4,11 +4,14 @@
         <meta charset="utf-8">
         <meta name="description" content="Описание страницы">
         <link rel="icon" href="fav.ico" type="image">
-        <title>Рецепт "{{title}}"</title>
+        <title>Список рецептов</title>
     </head>
     <body>
-        <h1>Рецепт</h1>
-        <h2>{{title}}</h2>
-        <div>Описание рецепта с id = {{recipe_id}}</div>
+        <h1>Рецепты</h1>
+        <ul>
+            {% for id, recipe in recipe_list.items %}
+            <li>{{ recipe.title }}</li>
+            {% endfor %}
+        </ul>
     </body>
 </html>
